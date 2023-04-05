@@ -178,7 +178,7 @@ background-color: #000;
     
     .padding-16 {
         padding-top: 16px !important;
-        padding-bottom: 16px !important
+        padding-bottom: 16px !important;
     }
     
     .left {
@@ -279,9 +279,7 @@ background-color: #000;
     
     .marquee {
         font-size: 35px;
-        color: #33041b;
-        text-shadow: 1px 1px 0 #1776a1, -1px -1px 0 #df8d8d, 1px -1px 0 #3201bb, -1px 1px 0 #d32d2d;
-        transform: perspective(100px) rotateY(20deg);
+        color: #e91e63;
         animation: marquee 10s linear infinite;
         white-space: nowrap;
     }
@@ -537,7 +535,6 @@ background-color: #000;
     footer,
     header,
     main,
-    menu,
     nav,
     section {
         display: block
@@ -1170,3 +1167,11 @@ marquee{background-color:#13060d!important ;font-size:25px;color:#be8d7b;font-fa
             transform: translateY(0);
         }
     }
+
+    .menu{ 
+        font-size: 24px !important;
+        top: 0;
+        clear: both;
+        padding-top: 16px !important;
+       }
+
