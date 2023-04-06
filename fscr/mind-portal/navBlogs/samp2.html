@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do-List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do-List</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .banner {
+      background-color: #0050ef;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    .testbox {
+      width: 90%;
+      max-width: 600px;
+      margin: 2rem auto;
+      border-radius: 0.25rem;
+      border: 1px solid #ccc;
+      padding: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    .item {
+      margin-bottom: 1rem;
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    input[type="text"], textarea, input[type="date"] {
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+    }
+    input[type="text"]:focus, textarea:focus, input[type="date"]:focus {
+      outline: none;
+      border-color: #0050ef;
+    }
+    .btn-block {
+      text-align: center;
+    }
+    button {
+      background-color: #0050ef;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1c68ff;
+    }
+    .task {
+      margin-bottom: 1rem;
+      border-radius: 0.25rem;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .task-title {
+      font-weight: bold;
+    }
+    .task-date {
+      font-size: 0.9rem;
+    }
+    .task-actions {
+      display: flex;
+      align-items: center;
+    }
+    .task-actions button {
+      margin-left: 1rem;
+      background-color: transparent;
+      color: #ccc;
+      border: none;
+      cursor: pointer;
+    }
+    .task-actions button:hover {
+      color: #0050ef;
+    }
+  </style>
+<body>
+  <div class="banner">
+    <h1>To-Do-List</h1>
+  </div>
+  <div class="testbox">
+    <form>
+      <div class="item">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Enter title" required>
+      </div>
+      <div class="item">
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Enter description"></textarea>
+      </div>
+      <div class="item">
+        <label for="date">Due Date</label>
+        <input type="date" id="date" required>
+      </div>
+      <div class="btn-block">
+        <button>Add Task</button>
+      </div>
+    </form>
+    <ul id="task-list">
+    </ul>
+  </div>
+  <script src="script.js">
+  const form = document.querySelector('form');
+    const taskList = document.querySelector('#task-list');
+    const taskInput = document.querySelector('#title');
+    const descInput = document.querySelector('#description');
+    const dateInput = document.querySelector('#date');
+    
+    form.addEventListener('submit', addTask);
+    
+    function addTask(e) {
+      e.preventDefault();
+    
+      const title = taskInput.value;
+      const description = descInput.value;
+      const dueDate = dateInput.value;
+    
+      if (title === '') {
+        alert('Please add a task title!');
+        return;
+      }
+    
+      const taskItem = document.createElement('li');
+      taskItem.innerHTML = `<span class="title">${title}</span> <span class="description">${description}</span> <span class="date">${dueDate}</span> <button class="delete">Delete</button>`;
+      taskList.appendChild(taskItem);
+    
+      taskInput.value = '';
+      descInput.value = '';
+      dateInput.value = '';
+    }
+    
+    taskList.addEventListener('click', deleteTask);
+    
+    function deleteTask(e) {
+      if (e.target.classList.contains('delete')) {
+        if (confirm('Are you sure you want to delete this task?')) {
+          const taskItem = e.target.parentElement;
+          taskList.removeChild(taskItem);
+        }
+      }
+    }
+    </script>
+</body>
+</html>

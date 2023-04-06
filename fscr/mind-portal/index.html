@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    //welcompage name code
+    //timeout code here
+    var a;
+    a = setTimeout(welpage, 200);
+    function welpage() {
+      let name;
+      let user = prompt("Please enter your name:");
+      if (user == null || user == "") {
+        name = "SORRY! ACCESS DENIED";
+      } else {
+        name = "Hello " +  user + "  You Are Not Subscribed Yet! Visit the Page As wayfarer by clicking the 'PASSTHROUGH' Button Below";
+      }
+      document.getElementById("nameprompt").innerHTML = name;
+    }
+    
+    </script>
+<style>
+
+*{
+  box-sizing: border-box;
+}
+.bgimg{
+  background-image: url('s2.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logincard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  margin-top: 110px;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.loginbutton{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 6px;
+  color: white;
+  background-color:#0e0107;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-weight:bold;
+  margin-top: -10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.allheads,h4{
+  background: linear-gradient(90deg, #33041b, #991254);
+}
+
+mark{
+  color: tomato;
+  background-color:cornsilk;
+}
+
+.p{
+  color: aliceblue;
+  font-variant-caps: all-petite-caps;
+  text-shadow: #991254;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(248, 243, 243, 0.2);
+}
+</style>
+</head>
+<body class="allheads">
+
+  <div class="p border"><p id="nameprompt"></p></div>
+
+<div class="logincard">
+  <img src="./w3images/me.jpg" alt="USER" style="width:100%">
+<div style="background-color:#991254;padding: 22px  0 0 0;">
+        <h1>GET IN!</h1>
+      <p class="title">LOGIN AS A USER</p>
+  <form action="pag1.html">
+    <button class="loginbutton">LOGIN</button>
+    <a href="./br/page2.html">>>>Login Manually</a>
+  </form>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+<!--DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      alert('HAPPY TO SEE YOU HERE!');
+    </script>
+  </head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.welimg {
+  background-image: url('weimg.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: rgb(3, 12, 24);
+  font-size: 25px;
+}
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+}
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
+<body>
+
+<div class="welimg">
+ 
+  <div class="middle">
+    <h1>WELCOME</h1>
+    <hr>
+
+    <button onclick="welpage()">LOGIN AS CLIENT</button>
+
+<p id="nameprompt" style=" color:aliceblue;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"> </p>
+
+  </div>
+  <div class="bottomright">
+    <a href="frontp1.html" target="_blank" style="text-decoration: none;font-family: Verdana, Geneva, Tahoma, sans-serif;">HOMEPAGE</a></p>
+  </div>
+</div>
+<script>
+  
+//welcompage name code
+
+function welpage() {
+  let name;
+  let user = prompt("Please enter your name:");
+  if (user == null || user == "") {
+    name = "SORRY! ACCESS DENIED";
+  } else {
+    name = "Hello " + user + " you can now the page by clicking the home page down ";
+  }
+  document.getElementById("nameprompt").innerHTML = name;
+}
+
+//timeout code here
+var a;
+a = setTimeout(access, 200);
+function access() {
+  let user = prompt("Please enter your name:");
+alert("ACCESS DENIED CLICK THE BUTTON BELOW\n\t\tAND REGISTER AS A CLIENT");
+}
+
+</script>
+
+</body>
+</html--> 
+
+
+
